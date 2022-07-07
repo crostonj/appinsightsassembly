@@ -15,7 +15,7 @@
 	<description>This is project to demonstrate packing the AppInsights Agent for a zip deployment </description>
 	<properties>
 		<java.version>17</java.version>
-		<app.insights.version>3.1.1</app.insights.version>
+		<app.insights.version>3.2.11</app.insights.version>
 	</properties>
 	<dependencies>
 		<dependency>
