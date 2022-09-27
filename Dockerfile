@@ -1,11 +1,12 @@
-FROM openjdk:16-alpine
+FROM openjdk:17-alpine
 
 WORKDIR /app
 
-##COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-RUN ./mvnw dependency:go-offline
+RUN apk update
+RUN apk add zip
 
-COPY src ./src
+COPY ./target/AppInsightsAgentAssembly.zip /app
 
-CMD ["./mvnw", "spring-boot:run"]
+RUN unzip AppInsightsAgentAssembly.zip
+
+CMD ["java", "-javaagent:./resources/applicationinsights-agent-3.4.1.jar", "-jar", "app.jar"]
