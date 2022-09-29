@@ -55,42 +55,10 @@
 					<artifactItems>
 						<artifactItem>
 							<groupId>com.microsoft.azure</groupId>
-							<artifactId>application-insights-agent</artifactId>
-							<version>${app.insights.version}</version>
-							<type>jar</type>
-							<overWrite>false</overWrite>
-							<!--                            <outputDirectory>${project.build.directory}/resources</outputDirectory>-->
-							<!--                            <destFileName>optional-new-name.jar</destFileName>-->
-						</artifactItem>
-					</artifactItems>
-					<outputDirectory>${project.build.directory}/resources</outputDirectory>
-					<overWriteReleases>false</overWriteReleases>
-					<overWriteSnapshots>true</overWriteSnapshots>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.1.1</version>
-				<executions>
-					<execution>
-						<id>copy-agent</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<artifactItems>
-						<artifactItem>
-							<groupId>com.microsoft.azure</groupId>
 							<artifactId>applicationinsights-agent</artifactId>
 							<version>${app.insights.version}</version>
 							<type>jar</type>
 							<overWrite>false</overWrite>
-							<!--                            <outputDirectory>${project.build.directory}/resources</outputDirectory>-->
-							<!--                            <destFileName>optional-new-name.jar</destFileName>-->
 						</artifactItem>
 					</artifactItems>
 					<outputDirectory>${project.build.directory}/resources</outputDirectory>
